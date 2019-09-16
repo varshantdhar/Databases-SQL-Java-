@@ -1,0 +1,1 @@
+γ count(name) -> cnt (π name (σ des_id = null (games ⟗ desgame)))

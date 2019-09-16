@@ -1,0 +1,43 @@
+1) 991.6 kb
+
+students: 20 + 4 + 8 + 4 = 36 * 12,000
+course: 40 + 8 + 4 = 52 * 300
+takes: 4 + 8 + 4 = 16 * 34,000
+
+= 991600 = 991.6 kb
+
+2a) 249 keys
+
+4000 >= (m-1) * 8 + m * 8
+4000 >= 8m - 8 + 8m
+4008 >= 16m
+250.5 >= m -> m = 250, m-1 = 249
+
+2b) 125 keys
+
+(m-1)/2 = 124.5
+
+3) height = 2
+
+(log 34000)/log(249) ~ 1.89
+
+4) 10 ms
+
+1 page seek to find record in unclustered hash index on sname + 1 read for record
+
+5) 11010 ms (maximum)
+
+max 1100 students. 2d*4 + (2d+1)*8 <= 4000 which is 3992/24 >= d, 166.33 >= d and so d = 166. We then use [h_i(10 ms)  + (1100-1) * 10] where h_i = ceil(log_166(12000)) = 2. 2*10 + (1099) * 10 = 11010
+
+6) 510 ms (maximum)
+
+50 courses for major = 134. 2d*4 + (2d+1)*8 <= 4000 which is 3992/24 >= d, 166.33 >= d and so d = 166. We then use [h_i(10 ms)  + (50-1) * 10] where h_i = ceil(log_166(300)) = 2. 2*10 + (49) * 10 = 510 ms. 
+
+7) 2 * Y
+
+Each scan of the inner relation requires one seek, and the scan of the outer relation requires one seek per block, leading to a total of 2 ∗ br seeks. We take the larger relation to be inside which is takes, leading to 2 * Y seeks (takes:Y). 
+
+8) Merge-join. If we assume one buffer block for each run, the number of seeks: 2*[takes/151]+2*[courses/151]+3*courses+3*takes.  
+
+9) Hash-join. Requires 2([takes/10]+[courses/10])+2*20
+

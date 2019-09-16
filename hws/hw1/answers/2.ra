@@ -1,0 +1,1 @@
+σ country ≠ null (π country <- country, cnt (γ country; COUNT(designer)-> cnt (designers)))

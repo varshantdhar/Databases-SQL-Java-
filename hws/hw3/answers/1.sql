@@ -1,0 +1,1 @@
+select name, count(review.user_id) as review_count from review inner join users on review.user_id = users.user_id group by name order by review_count desc limit 10;

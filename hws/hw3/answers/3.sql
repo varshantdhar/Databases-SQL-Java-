@@ -1,0 +1,1 @@
+select count(business.business_id) as count from business left join review on business.business_id = review.business_id where review.business_id is null; 

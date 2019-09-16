@@ -1,0 +1,7 @@
+Indexes Added: 3
+Justification: I decided to index the three largest data types that p1 (the first predicate) runs operations on which are most_recent_action (I set it to a varchar(80)), latitude (double precision) and longitude (double precision). I ignored the p2 predicate as it could be null/not present and decided against indexing zip as it is a real data type consisting of 4 bytes.
+
+Number of runs: 3
+Mean loading data time with no indexes: 0m2.69s
+Mean loading data with indexes: 0m9.46s
+Mean adding indexes time after data is loaded: 0m2.68s

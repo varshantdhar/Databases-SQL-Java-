@@ -1,0 +1,1 @@
+(π designer (σ rownum() > 0 ∧ rownum() ≤ 1 (τ [2] desc (π designer -> designer, cnt (γ designer; count(g_id) -> cnt (games ⨝ designers ⨝ desgame))))))
